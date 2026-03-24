@@ -15,4 +15,8 @@ class TareasModel:
     def crear(self, ID_usuario, Nombre_tarea, descripcion, prioridad, tipo):
         conn = self.db.get_connection()
         cursor = conn.cursor()
-        query = """INSERT """
+        query = """INSERT tareas (ID_usuario, Nombre_tarea, descripcion, prioridad, tipo)
+                VALUES (%s, %s, %s, %s, %s)"""
+        cursor.execute(query, (ID_usuario, Nombre_tarea, descripcion, prioridad, tipo))
+        conn.commit()
+        conn.close()
