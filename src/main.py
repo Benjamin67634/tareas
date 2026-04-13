@@ -1,10 +1,10 @@
 import flet as ft
-from src.controllers.UserController import AuthController
-from src.controllers.TareaController import TareaController
-from src.views.LoginView import LoginView
-from src.views.dashboard import DashboardView
+from controllers.UserController import AuthController
+from controllers.TareaController import TareaController
+from views.LoginView import LoginView
+from views.dashboard import DashboardView
 
-def main(main ft.Page):
+def main(page ft.Page):
     auth_ctrl = AuthController()
     task_ctrl = TareaController()
     
