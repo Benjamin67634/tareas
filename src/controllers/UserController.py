@@ -1,5 +1,5 @@
-from src.models.UserModel import UsuariosModel
-from src.models.SchemasModel import UsuariosSchema
+from models.UserModel import UsuariosModel
+from models.SchemasModel import UsuariosSchema
 from pydantic import ValidationError
 
 class AutoController:
